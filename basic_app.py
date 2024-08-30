@@ -3,9 +3,11 @@ import streamlit as st
 # Custom CSS for styling
 st.markdown("""
     <style>
-     
+       .main {
+            background-color: #f4f4f4;
+        }
         .header {
-            background-color: #2c3e50;
+           
             color: white;
             padding: 20px;
             text-align: center;
