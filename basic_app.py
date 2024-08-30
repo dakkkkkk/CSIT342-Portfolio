@@ -5,34 +5,38 @@ st.markdown("""
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 """, unsafe_allow_html=True)
 
-# Centered main title
-st.markdown("<h1 style='text-align: center;'>My Portfolio</h1>", unsafe_allow_html=True)
-
-# Navigation with icons
-pages = {
-    "Home": "fas fa-home",
-    "About Me": "fas fa-user",
-    "Portfolio": "fas fa-briefcase",
-    "Contacts": "fas fa-envelope"
-}
-
-selected_page = st.selectbox("", options=list(pages.keys()), format_func=lambda page: f"{page}")
-
-# Custom HTML for the selectbox to show icons
-st.markdown(f"""
-    <style>
-        .stSelectbox > div > div > div > div:first-of-type {{
-            font-family: 'Arial', sans-serif;
-            font-size: 18px;
-            font-weight: bold;
-        }}
-        .stSelectbox > div > div > div > div:first-of-type::before {{
-            font-family: 'FontAwesome';
-            content: '{pages[selected_page]}';
-            margin-right: 10px;
-        }}
-    </style>
+# Centered main title with icon above
+st.markdown("""
+    <div style="text-align: center;">
+        <i class="fas fa-laptop-code" style="font-size: 50px; color: #4CAF50;"></i>
+        <h1>My Portfolio</h1>
+    </div>
 """, unsafe_allow_html=True)
+
+# Navigation with icons above the selectbox
+st.markdown("""
+    <div style="display: flex; justify-content: space-evenly; margin-bottom: 20px;">
+        <div style="text-align: center;">
+            <i class="fas fa-home" style="font-size: 30px;"></i>
+            <p>Home</p>
+        </div>
+        <div style="text-align: center;">
+            <i class="fas fa-user" style="font-size: 30px;"></i>
+            <p>About Me</p>
+        </div>
+        <div style="text-align: center;">
+            <i class="fas fa-briefcase" style="font-size: 30px;"></i>
+            <p>Portfolio</p>
+        </div>
+        <div style="text-align: center;">
+            <i class="fas fa-envelope" style="font-size: 30px;"></i>
+            <p>Contacts</p>
+        </div>
+    </div>
+""", unsafe_allow_html=True)
+
+pages = ["Home", "About Me", "Portfolio", "Contacts"]
+selected_page = st.selectbox("", pages)
 
 # Page content
 if selected_page == "Home":
