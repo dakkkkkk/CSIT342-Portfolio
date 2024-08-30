@@ -32,4 +32,44 @@ elif selected_page == "About Me":
                 I'm a 4th-year college student studying at Cebu Institute of Technology - University. My course is Information Technology.
                 <br><br>
                 I have a passion for technology and programming, and I enjoy working on projects that involve software development and data analysis. 
-                Throughout my studies, I have developed skills in various programming
+                Throughout my studies, I have developed skills in various programming languages such as Python, Java, and JavaScript. I am particularly interested in 
+                web development and machine learning. 
+            </p>
+        </div>
+    """, unsafe_allow_html=True)
+
+elif selected_page == "Portfolio":
+    st.title("Portfolio")
+
+elif selected_page == "Contacts":
+    st.title("Contacts")
+    
+    # Add justified contact details with icons
+    st.markdown(f"""
+        <div style="text-align: justify;">
+            <p style="font-size: 18px; color: black;">You can reach me through the following platforms:</p>
+            <p style="font-size: 16px; color: black;">
+                <a href="mailto:roelanamerila@gmail.com" target="_blank" style="text-decoration: none; color: black;">
+                    <i class="fas fa-envelope" style="font-size: 30px; margin-right: 10px;"></i>
+                    Gmail: roelanamerila@gmail.com
+                </a>
+            </p>
+            <p style="font-size: 16px; color: black;">
+                <a href="https://github.com/dakkkkkk" target="_blank" style="text-decoration: none; color: black;">
+                    <i class="fab fa-github" style="font-size: 30px; margin-right: 10px;"></i>
+                    GitHub
+                </a>
+            </p>
+            <p style="font-size: 16px; color: black;">
+                <a href="https://www.facebook.com/your-profile-url" target="_blank" style="text-decoration: none; color: black;">
+                    <i class="fab fa-facebook" style="font-size: 30px; margin-right: 10px;"></i>
+                    Facebook
+                </a>
+            </p>
+        </div>
+    """, unsafe_allow_html=True)
+
+# Adding Font Awesome CDN for icons
+st.markdown("""
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+""", unsafe_allow_html=True)
