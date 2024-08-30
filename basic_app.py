@@ -44,14 +44,26 @@ elif selected_page == "Portfolio":
 elif selected_page == "Contacts":
     st.title("Contacts")
     
-    # Add contact details with GitHub icon
+    # Add contact details with icons
     st.markdown("""
         <div style="text-align: center;">
             <p style="font-size: 18px; color: black;">You can reach me through the following platforms:</p>
             <p style="font-size: 16px; color: black;">
+                <a href="mailto:roelanamerila@gmail.com" target="_blank" style="text-decoration: none; color: black;">
+                    <i class="fas fa-envelope" style="font-size: 30px; margin-right: 10px;"></i>
+                    Gmail: roelanamerila@gmail.com
+                </a>
+            </p>
+            <p style="font-size: 16px; color: black;">
                 <a href="https://github.com/dakkkkkk" target="_blank" style="text-decoration: none; color: black;">
                     <i class="fab fa-github" style="font-size: 30px; margin-right: 10px;"></i>
                     GitHub
+                </a>
+            </p>
+            <p style="font-size: 16px; color: black;">
+                <a href="https://www.facebook.com/your-profile-url" target="_blank" style="text-decoration: none; color: black;">
+                    <i class="fab fa-facebook" style="font-size: 30px; margin-right: 10px;"></i>
+                    Facebook
                 </a>
             </p>
         </div>
