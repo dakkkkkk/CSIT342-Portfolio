@@ -47,7 +47,7 @@ def apply_light_mode():
                 color: #000000;
             }
             .header {
-                background-color: #2c3e50;
+ 
                 color: white;
                 padding: 20px;
                 text-align: center;
