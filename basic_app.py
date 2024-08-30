@@ -9,8 +9,16 @@ selected_page = st.selectbox("", pages)
 
 # Page content
 if selected_page == "Home":
-    st.title("Home")
- 
+    st.title("Welcome to My Portfolio")
+
+    st.markdown("""
+        <p style="font-size: 18px; text-align: justify; color: black;">
+        Hello and welcome to my portfolio! My name is Roelan Amerila, and I am a dedicated and passionate 4th-year student 
+        pursuing a degree in Information Technology at Cebu Institute of Technology - University. 
+       
+        </p>
+    """, unsafe_allow_html=True)
+
 elif selected_page == "About Me":
     st.title("About Me")
 
@@ -32,6 +40,6 @@ elif selected_page == "About Me":
 
 elif selected_page == "Portfolio":
     st.title("Portfolio")
-   
+
 elif selected_page == "Contacts":
     st.title("Contacts")
