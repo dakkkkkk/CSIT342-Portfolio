@@ -14,10 +14,15 @@ if selected_page == "Home":
 elif selected_page == "About Me":
     st.title("About Me")
 
-    # Add an image under About Me
-    htp = "https://github.com/dakkkkkk/CSIT342-Portfolio/blob/main/Untitled.png?raw=true"
-    st.image(htp, caption='logo', width=500)
-  
+     htp = "https://github.com/dakkkkkk/CSIT342-Portfolio/blob/main/Untitled.png?raw=true"
+    st.markdown(f"""
+        <div style="text-align: center;">
+            <img src="{htp}" alt="logo" width="500">
+            <p style="font-size: 16px; color: grey;">logo</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+    
 elif selected_page == "Portfolio":
     st.title("Portfolio")
    
