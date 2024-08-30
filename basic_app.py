@@ -1,10 +1,10 @@
 import streamlit as st
 
 # Main title
-st.title("My Autobiography and Portfolio")
+st.title("My Portfolio")
 
 # Navigation
-pages = ["Home", "About Me", "Portfolio", "Autobiography"]
+pages = ["Home", "About Me", "Portfolio", "Contacts"]
 selected_page = st.selectbox("", pages)
 
 
@@ -35,5 +35,5 @@ elif selected_page == "About Me":
 elif selected_page == "Portfolio":
     st.title("Portfolio")
    
-elif selected_page == "Autobiography":
-    st.title("Autobiography")
+elif selected_page == "Contacts":
+    st.title("Contacts")
