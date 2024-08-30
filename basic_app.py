@@ -83,7 +83,7 @@ elif selected_page == "About Me":
 
     htp = "https://github.com/dakkkkkk/CSIT342-Portfolio/blob/main/Untitled.png?raw=true"
     # Centered image with name and justified paragraphs
-    st.markdown(f"""
+    st.markdown("""
         <div style="text-align: center;">
             <img src="{htp}" alt="logo" width="500">
             <p style="font-size: 24px; color: black; font-weight: bold; text-align: center;">Roelan Amerila</p>
