@@ -15,13 +15,7 @@ if selected_page == "Home":
         <p style="font-size: 18px; text-align: justify; color: black;">
         Hello and welcome to my portfolio! My name is Roelan Amerila, and I am a dedicated and passionate 4th-year student 
         pursuing a degree in Information Technology at Cebu Institute of Technology - University. 
-        <br><br>
-        Throughout my academic journey, I have cultivated a strong foundation in programming, software development, and data analysis. 
-        My interests lie particularly in web development and machine learning, where I have had the opportunity to work on various projects 
-        that have honed my skills in these areas. 
-        <br><br>
-        This portfolio showcases my academic projects, skills, and experiences that I have gained over the years. I am constantly learning and 
-        am eager to take on new challenges in the tech world. Feel free to explore and learn more about my journey!
+        
         </p>
     """, unsafe_allow_html=True)
 
@@ -49,3 +43,21 @@ elif selected_page == "Portfolio":
 
 elif selected_page == "Contacts":
     st.title("Contacts")
+    
+    # Add contact details with GitHub icon
+    st.markdown("""
+        <div style="text-align: center;">
+            <p style="font-size: 18px; color: black;">You can reach me through the following platforms:</p>
+            <p style="font-size: 16px; color: black;">
+                <a href="https://github.com/dakkkkkk" target="_blank" style="text-decoration: none; color: black;">
+                    <i class="fab fa-github" style="font-size: 30px; margin-right: 10px;"></i>
+                    GitHub
+                </a>
+            </p>
+        </div>
+    """, unsafe_allow_html=True)
+
+# Adding Font Awesome CDN for icons
+st.markdown("""
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+""", unsafe_allow_html=True)
