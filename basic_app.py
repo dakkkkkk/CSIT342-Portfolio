@@ -5,6 +5,7 @@ st.title("My Autobiography and Portfolio")
 
 # Navigation
 pages = ["Home", "About Me", "Portfolio", "Autobiography"]
+selected_page = st.selectbox( pages)
 
 
 # Page content
