@@ -5,14 +5,6 @@ st.markdown("""
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 """, unsafe_allow_html=True)
 
-# Centered main title with icon above
-st.markdown("""
-    <div style="text-align: center;">
-        <i class="fas fa-laptop-code" style="font-size: 50px; color: #4CAF50;"></i>
-        <h1>My Portfolio</h1>
-    </div>
-""", unsafe_allow_html=True)
-
 # Define pages
 pages = ["Home", "About Me", "Portfolio", "Contacts"]
 
@@ -24,35 +16,41 @@ page_icons = {
     "Contacts": ("fas fa-envelope", "Contacts")
 }
 
-# Create clickable icons
+# Navbar with clickable icons
 st.markdown("""
     <style>
-        .icon-bar {
+        .navbar {
             display: flex;
-            justify-content: space-evenly;
-            margin-bottom: 20px;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        .icon-bar a {
-            text-align: center;
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
             text-decoration: none;
-            color: black;
+            font-size: 17px;
+            text-align: center;
+            transition: background-color 0.3s;
         }
-        .icon-bar a:hover {
-            color: #4CAF50; /* Change color on hover */
+        .navbar a:hover {
+            background-color: #575757;
         }
-        .icon-bar i {
-            font-size: 30px;
+        .navbar i {
+            margin-right: 8px;
         }
     </style>
-    <div class="icon-bar">
+    <div class="navbar">
 """, unsafe_allow_html=True)
 
-# Generate clickable icons with links
+# Generate clickable icons with links in the navbar
 for page, (icon, label) in page_icons.items():
     st.markdown(f"""
-        <a href="?page={page}" title="{label}">
-            <i class="{icon}"></i>
-            <p>{label}</p>
+        <a href="?page={page}">
+            <i class="{icon}"></i>{label}
         </a>
     """, unsafe_allow_html=True)
 
@@ -92,15 +90,4 @@ elif selected_page == "About Me":
             <p style="font-size: 16px; color: black; text-align: justify;">
                 I'm a 4th-year college student studying at Cebu Institute of Technology - University. My course is Information Technology.
                 <br><br>
-                I have a passion for technology and programming, and I enjoy working on projects that involve software development and data analysis. 
-                Throughout my studies, I have developed skills in various programming languages such as Python, Java, and JavaScript. I am particularly interested in 
-                web development and machine learning. 
-            </p>
-        </div>
-    """, unsafe_allow_html=True)
-
-elif selected_page == "Portfolio":
-    st.title("Portfolio")
-
-elif selected_page == "Contacts":
-    st.title("Contacts")
+                I have a passion for technology and programming
