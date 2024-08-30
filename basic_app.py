@@ -18,7 +18,7 @@ elif selected_page == "About Me":
     # Correct indentation here
     st.markdown(f"""
         <div style="text-align: center;">
-            <img src="{htp}" alt="logo" width="500">
+            <img src="{htp}"  width="500">
             <p style="font-size: 16px; color: grey;">logo</p>
         </div>
     """, unsafe_allow_html=True)
