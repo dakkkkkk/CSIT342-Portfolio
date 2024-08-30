@@ -1,11 +1,38 @@
 import streamlit as st
 
+# Import icons (e.g., from Font Awesome)
+st.markdown("""
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+""", unsafe_allow_html=True)
+
 # Centered main title
 st.markdown("<h1 style='text-align: center;'>My Portfolio</h1>", unsafe_allow_html=True)
 
-# Navigation
-pages = ["Home", "About Me", "Portfolio", "Contacts"]
-selected_page = st.selectbox("", pages)
+# Navigation with icons
+pages = {
+    "Home": "fas fa-home",
+    "About Me": "fas fa-user",
+    "Portfolio": "fas fa-briefcase",
+    "Contacts": "fas fa-envelope"
+}
+
+selected_page = st.selectbox("", options=list(pages.keys()), format_func=lambda page: f"{page}")
+
+# Custom HTML for the selectbox to show icons
+st.markdown(f"""
+    <style>
+        .stSelectbox > div > div > div > div:first-of-type {{
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+        }}
+        .stSelectbox > div > div > div > div:first-of-type::before {{
+            font-family: 'FontAwesome';
+            content: '{pages[selected_page]}';
+            margin-right: 10px;
+        }}
+    </style>
+""", unsafe_allow_html=True)
 
 # Page content
 if selected_page == "Home":
@@ -15,7 +42,13 @@ if selected_page == "Home":
         <p style="font-size: 18px; text-align: justify; color: black;">
         Hello and welcome to my portfolio! My name is Roelan Amerila, and I am a dedicated and passionate 4th-year student 
         pursuing a degree in Information Technology at Cebu Institute of Technology - University. 
-       
+        <br><br>
+        Throughout my academic journey, I have cultivated a strong foundation in programming, software development, and data analysis. 
+        My interests lie particularly in web development and machine learning, where I have had the opportunity to work on various projects 
+        that have honed my skills in these areas. 
+        <br><br>
+        This portfolio showcases my academic projects, skills, and experiences that I have gained over the years. I am constantly learning and 
+        am eager to take on new challenges in the tech world. Feel free to explore and learn more about my journey!
         </p>
     """, unsafe_allow_html=True)
 
