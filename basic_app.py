@@ -13,6 +13,9 @@ if selected_page == "Home":
  
 elif selected_page == "About Me":
     st.title("About Me")
+
+htp = "https://github.com/dakkkkkk/CSIT342-Portfolio/blob/main/Untitled.png"
+st.image(htp, caption= 'logo', width=350)
   
 elif selected_page == "Portfolio":
     st.title("Portfolio")
