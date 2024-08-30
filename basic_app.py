@@ -12,7 +12,7 @@ background-color: #f0f2f6;
 .stTitle{
 
 font-size: 18px;
-
+ color: #333;
 }
  </style>
     """, unsafe_allow_html=True)
