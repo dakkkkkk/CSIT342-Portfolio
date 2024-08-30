@@ -20,7 +20,7 @@ elif selected_page == "About Me":
         <div style="text-align: center;">
             <img src="{htp}" alt="logo" width="500">
             <p style="font-size: 24px; color: black; font-weight: bold; text-align: center;">Roelan Amerila</p>
-            <p style="font-size: 16px; color: grey; text-align: justify;">
+            <p style="font-size: 16px; color: black; text-align: justify;">
                 I'm a 4th-year college student studying at Cebu Institute of Technology - University. My course is Information Technology.
                 <br><br>
                 I have a passion for technology and programming, and I enjoy working on projects that involve software development and data analysis. 
