@@ -13,30 +13,54 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
-# Navigation with icons above the selectbox
+# Define pages
+pages = ["Home", "About Me", "Portfolio", "Contacts"]
+
+# Create a dictionary mapping pages to icons and their labels
+page_icons = {
+    "Home": ("fas fa-home", "Home"),
+    "About Me": ("fas fa-user", "About Me"),
+    "Portfolio": ("fas fa-briefcase", "Portfolio"),
+    "Contacts": ("fas fa-envelope", "Contacts")
+}
+
+# Create clickable icons
 st.markdown("""
-    <div style="display: flex; justify-content: space-evenly; margin-bottom: 20px;">
-        <div style="text-align: center;">
-            <i class="fas fa-home" style="font-size: 30px;"></i>
-            <p>Home</p>
-        </div>
-        <div style="text-align: center;">
-            <i class="fas fa-user" style="font-size: 30px;"></i>
-            <p>About Me</p>
-        </div>
-        <div style="text-align: center;">
-            <i class="fas fa-briefcase" style="font-size: 30px;"></i>
-            <p>Portfolio</p>
-        </div>
-        <div style="text-align: center;">
-            <i class="fas fa-envelope" style="font-size: 30px;"></i>
-            <p>Contacts</p>
-        </div>
-    </div>
+    <style>
+        .icon-bar {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 20px;
+        }
+        .icon-bar a {
+            text-align: center;
+            text-decoration: none;
+            color: black;
+        }
+        .icon-bar a:hover {
+            color: #4CAF50; /* Change color on hover */
+        }
+        .icon-bar i {
+            font-size: 30px;
+        }
+    </style>
+    <div class="icon-bar">
 """, unsafe_allow_html=True)
 
-pages = ["Home", "About Me", "Portfolio", "Contacts"]
-selected_page = st.selectbox("", pages)
+# Generate clickable icons with links
+for page, (icon, label) in page_icons.items():
+    st.markdown(f"""
+        <a href="?page={page}" title="{label}">
+            <i class="{icon}"></i>
+            <p>{label}</p>
+        </a>
+    """, unsafe_allow_html=True)
+
+st.markdown("</div>", unsafe_allow_html=True)
+
+# Get selected page from URL parameters
+params = st.experimental_get_query_params()
+selected_page = params.get("page", ["Home"])[0]
 
 # Page content
 if selected_page == "Home":
