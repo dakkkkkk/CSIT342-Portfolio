@@ -9,7 +9,7 @@ def apply_dark_mode():
                 color: #e0e0e0;
             }
             .header {
-                background-color: #1f1f1f;
+            
                 color: #e0e0e0;
                 padding: 20px;
                 text-align: center;
