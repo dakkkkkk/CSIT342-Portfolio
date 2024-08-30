@@ -16,7 +16,7 @@ elif selected_page == "About Me":
 
     # Add an image under About Me
     htp = "https://github.com/dakkkkkk/CSIT342-Portfolio/blob/main/Untitled.png?raw=true"
-    st.image(htp, caption='logo', width=350)
+    st.image(htp, caption='logo', width=500)
   
 elif selected_page == "Portfolio":
     st.title("Portfolio")
