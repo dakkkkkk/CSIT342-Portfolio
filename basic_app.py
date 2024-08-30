@@ -1,13 +1,11 @@
 import streamlit as st
 
-# Main title
-st.title("My Portfolio")
+# Centered main title
+st.markdown("<h1 style='text-align: center;'>My Portfolio</h1>", unsafe_allow_html=True)
 
 # Navigation
 pages = ["Home", "About Me", "Portfolio", "Contacts"]
 selected_page = st.selectbox("", pages)
-
-
 
 # Page content
 if selected_page == "Home":
