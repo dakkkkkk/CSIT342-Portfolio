@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Function to apply custom CSS for dark mode
+# Function to apply dark mode CSS
 def apply_dark_mode():
     st.markdown("""
         <style>
@@ -38,7 +38,7 @@ def apply_dark_mode():
         </style>
     """, unsafe_allow_html=True)
 
-# Function to apply custom CSS for light mode
+# Function to apply light mode CSS
 def apply_light_mode():
     st.markdown("""
         <style>
@@ -76,11 +76,19 @@ def apply_light_mode():
         </style>
     """, unsafe_allow_html=True)
 
-# Dark mode or light mode selector
-theme = st.selectbox("Select Theme", ["Light Mode", "Dark Mode"])
+# Initialize session state for theme if not already present
+if 'theme' not in st.session_state:
+    st.session_state.theme = 'Light Mode'
+
+# Theme selection
+theme = st.selectbox("Select Theme", ["Light Mode", "Dark Mode"], index=["Light Mode", "Dark Mode"].index(st.session_state.theme))
+
+# Update theme in session state
+if theme != st.session_state.theme:
+    st.session_state.theme = theme
 
 # Apply the selected theme
-if theme == "Dark Mode":
+if st.session_state.theme == "Dark Mode":
     apply_dark_mode()
 else:
     apply_light_mode()
