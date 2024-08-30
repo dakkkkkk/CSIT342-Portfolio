@@ -14,7 +14,7 @@ if selected_page == "Home":
 elif selected_page == "About Me":
     st.title("About Me")
 
-      htp = "https://github.com/dakkkkkk/CSIT342-Portfolio/blob/main/Untitled.png?raw=true"
+    htp = "https://github.com/dakkkkkk/CSIT342-Portfolio/blob/main/Untitled.png?raw=true"
      st.markdown(f"""
         <div style="text-align: center;">
             <img src="{htp}" alt="logo" width="500">
