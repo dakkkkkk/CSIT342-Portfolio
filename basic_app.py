@@ -1,4 +1,4 @@
-import streamlit as st
+eimport streamlit as st
 
 # Function to apply dark mode CSS
 def apply_dark_mode():
@@ -118,9 +118,9 @@ elif selected_page == "About Me":
     htp = "https://github.com/dakkkkkk/CSIT342-Portfolio/blob/main/Untitled.png?raw=true"
     st.markdown(f"""
         <div style="text-align: center;">
-            <img src="{htp}" alt="logo" width="500" style="border-radius: 10px; margin-top: 15px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+            <img src="{htp}" alt="logo" width="500" style="border-radius: 10px; margin-top:15px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
             <p style="font-size: 24px; font-weight: bold; margin-top: 15px">Roelan Amerila</p>
-            <p style="font-size: 16px; text-align: justify;">
+            <p style="font-size: 16px; text-align: justify;;margin-top: 15px">
                 I'm a 4th-year college student studying at Cebu Institute of Technology - University. My course is Information Technology.
                 <br><br>
                 I have a passion for technology and programming, and I enjoy working on projects that involve software development and data analysis. 
