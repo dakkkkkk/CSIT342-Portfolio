@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Function to apply dark mode CSS
+
 def apply_dark_mode():
     st.markdown("""
         <style>
@@ -37,7 +37,7 @@ def apply_dark_mode():
         </style>
     """, unsafe_allow_html=True)
 
-# Function to apply light mode CSS
+
 def apply_light_mode():
     st.markdown("""
         <style>
@@ -74,32 +74,31 @@ def apply_light_mode():
         </style>
     """, unsafe_allow_html=True)
 
-# Initialize session state for theme if not already present
+
 if 'theme' not in st.session_state:
     st.session_state.theme = 'Light Mode'
 
-# Sidebar theme selection
+
 st.sidebar.title("Settings")
 theme = st.sidebar.selectbox("Select Theme", ["Light Mode", "Dark Mode"], index=["Light Mode", "Dark Mode"].index(st.session_state.theme))
 
-# Update theme in session state
 if theme != st.session_state.theme:
     st.session_state.theme = theme
 
-# Apply the selected theme
+
 if st.session_state.theme == "Dark Mode":
     apply_dark_mode()
 else:
     apply_light_mode()
 
-# Centered main title
+
 st.markdown("<div class='header'><h1>My Portfolio</h1></div>", unsafe_allow_html=True)
 
-# Navigation
+
 pages = ["Home", "About Me", "Portfolio", "Contacts"]
 selected_page = st.selectbox("", pages)
 
-# Page content
+
 if selected_page == "Home":
     st.markdown("<div class='content'>", unsafe_allow_html=True)
     st.title("Welcome to My Portfolio")
@@ -197,7 +196,7 @@ elif selected_page == "Contacts":
     """, unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
-# Adding Font Awesome CDN for icons
+
 st.markdown("""
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 """, unsafe_allow_html=True)
