@@ -4,13 +4,16 @@ import streamlit as st
 def apply_dark_mode():
     st.markdown("""
         <style>
-            .main {
+            body {
                 background-color: #121212;
                 color: #e0e0e0;
+                font-family: 'Arial', sans-serif;
             }
             .header {
-                color: #e0e0e0;
-                padding: 20px;
+                background-image: url('https://example.com/your-banner.jpg');
+                background-size: cover;
+                color: #ffffff;
+                padding: 40px;
                 text-align: center;
                 border-radius: 10px;
             }
@@ -41,13 +44,16 @@ def apply_dark_mode():
 def apply_light_mode():
     st.markdown("""
         <style>
-            .main {
+            body {
                 background-color: #f4f4f4;
                 color: #000000;
+                font-family: 'Arial', sans-serif;
             }
             .header {
+                background-image: url('https://example.com/your-banner.jpg');
+                background-size: cover;
                 color: white;
-                padding: 20px;
+                padding: 40px;
                 text-align: center;
                 border-radius: 10px;
             }
@@ -138,12 +144,12 @@ elif selected_page == "Portfolio":
     htp = "https://github.com/dakkkkkk/CSIT342-Portfolio/blob/main/Untitled.png?raw=true"
     st.markdown(f"""
         <div style="text-align: center;">
-            <img src="{htp}" alt="Your Picture" width="500" style="border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+            <img src="{htp}" alt="Your Picture" width="300" style="border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
         </div>
     """, unsafe_allow_html=True)
     
     st.markdown("""
-        <h2 style ="margin-top: 20px">Education</h2>
+        <h2>Education</h2>
         <p style="font-size: 18px; text-align: justify;">
         <b>Gradeschool:</b> University of San Jose Recoletos
         <br>
@@ -155,15 +161,12 @@ elif selected_page == "Portfolio":
         </p>
         
         <h2>Skills</h2>
-        <p style="font-size: 18px; text-align: justify;">
-            <b>Programming Languages:</b> Python, Java, JavaScript
-            <br>
-            <b>Web Development:</b> HTML, CSS, JavaScript, React
-            <br>
-            <b>Database Management:</b> MySQL, PostgreSQL
-            <br>
+        <ul style="font-size: 18px; text-align: justify;">
+            <li>Programming Languages: Python, Java, JavaScript</li>
+            <li>Web Development: HTML, CSS, JavaScript, React</li>
+            <li>Database Management: MySQL, PostgreSQL</li>
             <b>Tools & Technologies:</b> Git, Streamlit
-        </p>
+        </ul>
     """, unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
@@ -185,19 +188,3 @@ elif selected_page == "Contacts":
                 <a href="https://github.com/dakkkkkk" target="_blank">
                     <i class="fab fa-github contact-icon"></i>
                     GitHub
-                </a>
-            </p>
-            <p style="font-size: 16px;">
-                <a href="https://www.facebook.com/your-profile-url" target="_blank">
-                    <i class="fab fa-facebook contact-icon"></i>
-                    Facebook
-                </a>
-            </p>
-        </div>
-    """, unsafe_allow_html=True)
-    st.markdown("</div>", unsafe_allow_html=True)
-
-# Adding Font Awesome CDN for icons
-st.markdown("""
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-""", unsafe_allow_html=True)
