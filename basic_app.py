@@ -4,16 +4,13 @@ import streamlit as st
 def apply_dark_mode():
     st.markdown("""
         <style>
-            body {
+            .main {
                 background-color: #121212;
                 color: #e0e0e0;
-                font-family: 'Arial', sans-serif;
             }
             .header {
-                background-image: url('https://example.com/your-banner.jpg');
-                background-size: cover;
-                color: #ffffff;
-                padding: 40px;
+                color: #e0e0e0;
+                padding: 20px;
                 text-align: center;
                 border-radius: 10px;
             }
@@ -44,16 +41,13 @@ def apply_dark_mode():
 def apply_light_mode():
     st.markdown("""
         <style>
-            body {
+            .main {
                 background-color: #f4f4f4;
                 color: #000000;
-                font-family: 'Arial', sans-serif;
             }
             .header {
-                background-image: url('https://example.com/your-banner.jpg');
-                background-size: cover;
                 color: white;
-                padding: 40px;
+                padding: 20px;
                 text-align: center;
                 border-radius: 10px;
             }
@@ -165,7 +159,7 @@ elif selected_page == "Portfolio":
             <li>Programming Languages: Python, Java, JavaScript</li>
             <li>Web Development: HTML, CSS, JavaScript, React</li>
             <li>Database Management: MySQL, PostgreSQL</li>
-            <b>Tools & Technologies:</b> Git, Streamlit
+            <li>Tools & Technologies: Git, Streamlit</li>
         </ul>
     """, unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
@@ -188,3 +182,19 @@ elif selected_page == "Contacts":
                 <a href="https://github.com/dakkkkkk" target="_blank">
                     <i class="fab fa-github contact-icon"></i>
                     GitHub
+                </a>
+            </p>
+            <p style="font-size: 16px;">
+                <a href="https://www.facebook.com/your-profile-url" target="_blank">
+                    <i class="fab fa-facebook contact-icon"></i>
+                    Facebook
+                </a>
+            </p>
+        </div>
+    """, unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
+
+# Adding Font Awesome CDN for icons
+st.markdown("""
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+""", unsafe_allow_html=True)
