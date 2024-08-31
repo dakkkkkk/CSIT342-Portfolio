@@ -138,7 +138,7 @@ elif selected_page == "Portfolio":
     htp = "https://github.com/dakkkkkk/CSIT342-Portfolio/blob/main/Untitled.png?raw=true"
     st.markdown(f"""
         <div style="text-align: center;">
-            <img src="{htp}" alt="Your Picture" width="300" style="border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+            <img src="{htp}" alt="Your Picture" width="500" style="border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
         </div>
     """, unsafe_allow_html=True)
     
