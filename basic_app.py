@@ -13,7 +13,7 @@ def apply_dark_mode():
                 background-image: url('https://example.com/your-banner.jpg');
                 background-size: cover;
                 color: #ffffff;
-                padding: 40px;
+                padding: 40px:
                 text-align: center;
                 border-radius: 10px;
             }
