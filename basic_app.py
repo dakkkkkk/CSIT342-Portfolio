@@ -187,4 +187,15 @@ elif selected_page == "Contacts":
             <p style="font-size: 16px;">
                 <a href="https://github.com/dakkkkkk" target="_blank">
                     <i class="fab fa-github contact-icon"></i>
-                    GitHub
+                    GitHub: dakkkkkk
+                </a>
+            </p>
+            <p style="font-size: 16px;">
+                <a href="https://facebook.com/yourprofile" target="_blank">
+                    <i class="fab fa-facebook contact-icon"></i>
+                    Facebook: yourprofile
+                </a>
+            </p>
+        </div>
+    """, unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
