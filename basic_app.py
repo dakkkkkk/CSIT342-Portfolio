@@ -155,12 +155,15 @@ elif selected_page == "Portfolio":
         </p>
         
         <h2>Skills</h2>
-        <ul style="font-size: 18px; text-align: justify;">
-            <li>Programming Languages: Python, Java, JavaScript</li>
-            <li>Web Development: HTML, CSS, JavaScript, React</li>
-            <li>Database Management: MySQL, PostgreSQL</li>
-            <li>Tools & Technologies: Git, Streamlit</li>
-        </ul>
+        <p style="font-size: 18px; text-align: justify;">
+            <b>Programming Languages:</b> Python, Java, JavaScript
+            <br>
+            <b>Web Development:</b> HTML, CSS, JavaScript, React
+            <br>
+            <b>Database Management:</b> MySQL, PostgreSQL
+            <br>
+            <b>Tools & Technologies:</b> Git, Streamlit
+        </p>
     """, unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
