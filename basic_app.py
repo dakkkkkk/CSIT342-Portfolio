@@ -1,4 +1,4 @@
-eimport streamlit as st
+import streamlit as st
 
 # Function to apply dark mode CSS
 def apply_dark_mode():
