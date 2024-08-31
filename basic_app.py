@@ -135,7 +135,7 @@ elif selected_page == "Portfolio":
     st.markdown("<div class='content'>", unsafe_allow_html=True)
     st.title("Portfolio")
     
-    # Add your picture
+     htp = "https://github.com/dakkkkkk/CSIT342-Portfolio/blob/main/Untitled.png?raw=true"
     st.markdown(f"""
         <div style="text-align: center;">
             <img src="{htp}" alt="Your Picture" width="300" style="border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
