@@ -9,7 +9,7 @@ def apply_dark_mode():
                 color: #e0e0e0;
             }
             .header {
-            
+                background-color: #1f1f1f;
                 color: #e0e0e0;
                 padding: 20px;
                 text-align: center;
@@ -47,7 +47,7 @@ def apply_light_mode():
                 color: #000000;
             }
             .header {
- 
+                background-color: #2c3e50;
                 color: white;
                 padding: 20px;
                 text-align: center;
@@ -137,8 +137,15 @@ elif selected_page == "Portfolio":
     st.markdown("<div class='content'>", unsafe_allow_html=True)
     st.title("Portfolio")
     st.markdown("""
+        <h2>Education</h2>
         <p style="font-size: 18px; text-align: justify;">
-        This section will showcase my projects and achievements. Stay tuned for updates!
+        <b>Gradeschool:</b> University of San Jose Recoletos
+        <br>
+        <b>High School:</b> Holy Rosary School of Pardo
+        <br>
+        <b>Senior High School:</b> Cebu Institute of Technology - University
+        <br>
+        <b>College:</b> Cebu Institute of Technology - University, Information Technology
         </p>
     """, unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
