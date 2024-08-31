@@ -16,7 +16,6 @@ def apply_dark_mode():
             }
             .content {
                 padding: 20px;
-                text-align: justify;
             }
             .contacts {
                 background-color: #1e1e1e;
@@ -54,7 +53,6 @@ def apply_light_mode():
             }
             .content {
                 padding: 20px;
-                text-align: justify;
             }
             .contacts {
                 background-color: #ecf0f1;
@@ -106,7 +104,7 @@ if selected_page == "Home":
     st.markdown("<div class='content'>", unsafe_allow_html=True)
     st.title("Welcome to My Portfolio")
     st.markdown("""
-        <p style="font-size: 18px;">
+        <p style="font-size: 18px; text-align: justify;">
         Hello and welcome to my portfolio! My name is Roelan Amerila, and I am a dedicated and passionate 4th-year student 
         pursuing a degree in Information Technology at Cebu Institute of Technology - University. 
         </p>
@@ -122,7 +120,7 @@ elif selected_page == "About Me":
         <div style="text-align: center;">
             <img src="{htp}" alt="logo" width="500" style="border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
             <p style="font-size: 24px; font-weight: bold;">Roelan Amerila</p>
-            <p style="font-size: 16px;">
+            <p style="font-size: 16px; text-align: justify;">
                 I'm a 4th-year college student studying at Cebu Institute of Technology - University. My course is Information Technology.
                 <br><br>
                 I have a passion for technology and programming, and I enjoy working on projects that involve software development and data analysis. 
@@ -136,9 +134,17 @@ elif selected_page == "About Me":
 elif selected_page == "Portfolio":
     st.markdown("<div class='content'>", unsafe_allow_html=True)
     st.title("Portfolio")
+    
+    # Add your picture
+    st.markdown(f"""
+        <div style="text-align: center;">
+            <img src="{htp}" alt="Your Picture" width="300" style="border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+        </div>
+    """, unsafe_allow_html=True)
+    
     st.markdown("""
         <h2>Education</h2>
-        <p style="font-size: 18px;">
+        <p style="font-size: 18px; text-align: justify;">
         <b>Gradeschool:</b> University of San Jose Recoletos
         <br>
         <b>High School:</b> Holy Rosary School of Pardo
@@ -149,17 +155,14 @@ elif selected_page == "Portfolio":
         </p>
         
         <h2>Skills</h2>
-        <p style="font-size: 18px;">
-        <b>Programming Languages:</b> Python, Java, JavaScript
-        <br>
-        <b>Web Development:</b> HTML, CSS, JavaScript, React
-        <br>
-        <b>Database Management:</b> MySQL, PostgreSQL
-        <br>
-        <b>Tools & Technologies:</b> Git, Streamlit, 
-        <br>
-        <b>Other Skills:</b> Problem-solving, Project Management, Data Analysis
-        </p>
+        <ul style="font-size: 18px; text-align: justify;">
+            <li>Programming Languages: Python, Java, JavaScript</li>
+            <li>Web Development: HTML, CSS, JavaScript, React</li>
+            <li>Database Management: MySQL, PostgreSQL</li>
+            <b>Tools & Technologies:</b> Git, Streamlit
+         
+         
+        </ul>
     """, unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
@@ -169,7 +172,7 @@ elif selected_page == "Contacts":
     
     # Add justified contact details with icons
     st.markdown(f"""
-        <div style="text-align: center;">
+        <div style="text-align: justify;">
             <p style="font-size: 18px;">You can reach me through the following platforms:</p>
             <p style="font-size: 16px;">
                 <a href="mailto:roelanamerila@gmail.com" target="_blank">
