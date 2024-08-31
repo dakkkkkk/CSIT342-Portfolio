@@ -143,7 +143,7 @@ elif selected_page == "Portfolio":
     """, unsafe_allow_html=True)
     
     st.markdown("""
-        <h2>Education</h2>
+        <h2 style="margin-top: 20px">Education</h2>
         <p style="font-size: 18px; text-align: justify;">
         <b>Gradeschool:</b> University of San Jose Recoletos
         <br>
