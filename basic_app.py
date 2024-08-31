@@ -135,7 +135,7 @@ elif selected_page == "Portfolio":
     st.markdown("<div class='content'>", unsafe_allow_html=True)
     st.title("Portfolio")
     
-     htp = "https://github.com/dakkkkkk/CSIT342-Portfolio/blob/main/Untitled.png?raw=true"
+    htp = "https://github.com/dakkkkkk/CSIT342-Portfolio/blob/main/Untitled.png?raw=true"
     st.markdown(f"""
         <div style="text-align: center;">
             <img src="{htp}" alt="Your Picture" width="300" style="border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
@@ -159,9 +159,7 @@ elif selected_page == "Portfolio":
             <li>Programming Languages: Python, Java, JavaScript</li>
             <li>Web Development: HTML, CSS, JavaScript, React</li>
             <li>Database Management: MySQL, PostgreSQL</li>
-            <b>Tools & Technologies:</b> Git, Streamlit
-         
-         
+            <li>Tools & Technologies: Git, Streamlit</li>
         </ul>
     """, unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
