@@ -13,7 +13,7 @@ def apply_dark_mode():
                 background-image: url('https://example.com/your-banner.jpg');
                 background-size: cover;
                 color: #ffffff;
-                padding: 40px:
+                padding: 40px;
                 text-align: center;
                 border-radius: 10px;
             }
@@ -187,15 +187,4 @@ elif selected_page == "Contacts":
             <p style="font-size: 16px;">
                 <a href="https://github.com/dakkkkkk" target="_blank">
                     <i class="fab fa-github contact-icon"></i>
-                    GitHub: dakkkkkk
-                </a>
-            </p>
-            <p style="font-size: 16px;">
-                <a href="https://facebook.com/yourprofile" target="_blank">
-                    <i class="fab fa-facebook contact-icon"></i>
-                    Facebook: yourprofile
-                </a>
-            </p>
-        </div>
-    """, unsafe_allow_html=True)
-    st.markdown("</div>", unsafe_allow_html=True)
+                    GitHub
