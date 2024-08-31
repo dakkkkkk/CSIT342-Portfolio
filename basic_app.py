@@ -9,7 +9,6 @@ def apply_dark_mode():
                 color: #e0e0e0;
             }
             .header {
-                background-color: #1f1f1f;
                 color: #e0e0e0;
                 padding: 20px;
                 text-align: center;
@@ -22,7 +21,7 @@ def apply_dark_mode():
                 background-color: #1e1e1e;
                 border-radius: 10px;
                 padding: 20px;
-                text-align: center;
+                text-align: justify;
             }
             .contacts a {
                 text-decoration: none;
@@ -47,7 +46,6 @@ def apply_light_mode():
                 color: #000000;
             }
             .header {
-                background-color: #2c3e50;
                 color: white;
                 padding: 20px;
                 text-align: center;
@@ -60,7 +58,7 @@ def apply_light_mode():
                 background-color: #ecf0f1;
                 border-radius: 10px;
                 padding: 20px;
-                text-align: center;
+                text-align: justify;
             }
             .contacts a {
                 text-decoration: none;
@@ -156,7 +154,7 @@ elif selected_page == "Contacts":
     
     # Add justified contact details with icons
     st.markdown(f"""
-        <div style="text-align: center;">
+        <div style="text-align: justify;">
             <p style="font-size: 18px;">You can reach me through the following platforms:</p>
             <p style="font-size: 16px;">
                 <a href="mailto:roelanamerila@gmail.com" target="_blank">
